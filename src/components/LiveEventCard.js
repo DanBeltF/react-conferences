@@ -67,7 +67,8 @@ class LiveEventCard extends React.Component {
                     />
                     <CardMedia
                         className={classes.media}
-
+                        square
+                        image={this.props.image}
                         title="costumer"
                     />
                     <CardContent>

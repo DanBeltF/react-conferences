@@ -14,14 +14,16 @@ export class LiveEventList extends React.Component {
                 "date": "March 13, 2019 4:30 p.m.",
                 "location": "Kuala Lumpur, Malaysia",
                 "tags": "Customer, Service, Management",
-                "author": "Ryan Scheffeld"
+                "author": "Ryan Scheffeld",
+                "image": "https://cdn.elearningindustry.com/wp-content/uploads/2017/05/hidden-benefits-customer-service-online-training.jpg"
             },
             {
                 "title": "Legislative Tools",
                 "date": "March 13, 2019 4:00 p.m.",
                 "location": "Washington DC, USA",
                 "tags": "Law, Politics, Rights",
-                "author": "Scott Rivers"
+                "author": "Scott Rivers",
+                "image": "https://www.hqmc.marines.mil/portals/61/Site%20Images/OLA/capitol-building-picture.jpg"
             }
         ];
 
@@ -39,6 +41,7 @@ export class LiveEventList extends React.Component {
                           location={event.location}
                           tags={event.tags}
                           author={event.author}
+                          image={event.image}
                     />
                 )}
             </>

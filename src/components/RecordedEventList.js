@@ -14,7 +14,8 @@ export class RecordedEventList extends React.Component {
                 "date": "October 18, 2018 7:45 p.m.",
                 "location": "Livonia Library, NY, USA",
                 "tags": "Conflict, Behavior, Empower",
-                "author": "Jay Johnson"
+                "author": "Jay Johnson",
+                "image": "https://i2.wp.com/adrdaily.com/wp-content/uploads/2018/01/dealing-with-difficult-people.jpg?fit=800%2C420&ssl=1"
             }
         ];
 
@@ -32,6 +33,7 @@ export class RecordedEventList extends React.Component {
                                    location={event.location}
                                    tags={event.tags}
                                    author={event.author}
+                                   image={event.image}
                     />
                 )}
             </>

@@ -68,8 +68,9 @@ class RecordedEventCard extends React.Component {
                     />
                     <CardMedia
                         className={classes.media}
-
-                        title="costumer"
+                        square
+                        image={this.props.image}
+                        title="image"
                     />
                     <CardContent>
                         <Typography component="p">

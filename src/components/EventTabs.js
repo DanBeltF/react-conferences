@@ -6,7 +6,8 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import {LiveEventList} from "./LiveEventList";
 import {RecordedEventList} from "./RecordedEventList";
-
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
 
 function TabContainer(props) {
     return (
@@ -21,6 +22,10 @@ const styles = theme => ({
         flexGrow: 1,
         backgroundColor: theme.palette.background.paper,
     },
+    fab: {
+        marginLeft: "150vh"
+
+    }
 });
 
 class EventTabs extends React.Component {
@@ -48,6 +53,9 @@ class EventTabs extends React.Component {
                 </AppBar>
                 {value === 0 && <TabContainer><LiveEventList/></TabContainer>}
                 {value === 1 && <TabContainer><RecordedEventList/></TabContainer>}
+                <Fab color="primary" aria-label="Add" className={classes.fab}>
+                     <AddIcon />
+                </Fab>
             </div>
         );
     }
