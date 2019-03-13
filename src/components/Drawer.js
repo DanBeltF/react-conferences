@@ -23,6 +23,7 @@ import ViewQuiltIcon from '@material-ui/icons/ViewQuilt';
 import { withStyles } from '@material-ui/core/styles';
 
 import {Link} from 'react-router-dom';
+import EventTabs from "./EventTabs";
 
 const drawerWidth = 240;
 
@@ -94,7 +95,7 @@ class ResponsiveDrawer extends React.Component {
                     </IconButton>
                 </ListItem>
                 <Divider />
-                <ListItem button key="Events" component={Link} to="">
+                <ListItem button key="Events" component={Link} to="/events">
                     <ListItemIcon>
                         <ViewQuiltIcon />
                     </ListItemIcon>
@@ -136,7 +137,7 @@ class ResponsiveDrawer extends React.Component {
                             <MenuIcon />
                         </IconButton>
                         <Typography variant="h6" color="inherit" noWrap>
-                            Events
+                            Conferences
                         </Typography>
                     </Toolbar>
                 </AppBar>
@@ -171,6 +172,7 @@ class ResponsiveDrawer extends React.Component {
                 </nav>
                 <main className={classes.content}>
                     <div className={classes.toolbar} />
+                    <EventTabs/>
 
                 </main>
             </div>
