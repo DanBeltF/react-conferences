@@ -96,7 +96,7 @@ class ResponsiveDrawer extends React.Component {
                     </IconButton>
                 </ListItem>
                 <Divider />
-                <ListItem button key="Events" component={Link} to="/npm">
+                <ListItem button key="Events" component={Link} to="/events">
                     <ListItemIcon>
                         <ViewQuiltIcon />
                     </ListItemIcon>
@@ -173,7 +173,7 @@ class ResponsiveDrawer extends React.Component {
                 </nav>
                 <main className={classes.content}>
                     <div className={classes.toolbar} />
-                    <EventTabs/>
+
 
                 </main>
             </div>

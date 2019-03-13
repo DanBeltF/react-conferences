@@ -2,7 +2,6 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import ReactPlayer from 'react-player'
 import Grid from '@material-ui/core/Grid';
 import Questions from "./Questions";
 import TextField from "@material-ui/core/es/TextField/TextField";
@@ -57,7 +56,7 @@ function LiveEventDetail(props) {
                                 <Questions/>
                                 Participate:
                                 <TextField id="text"
-                                           label="Text"/>
+                                           label="Question to add"/>
                             </Typography>
                         </Paper>
                     </Grid>

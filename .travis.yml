@@ -1,4 +1,4 @@
-git language: node_js
+language: node_js
 node_js:
   - 10.15.3
 warnings_are_errors: false
