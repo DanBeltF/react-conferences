@@ -7,6 +7,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import RecordedEventDetail from "./components/RecordedEventDetail";
 import MyEvents from "./components/MyEvents";
 import LiveEventDetail from "./components/LiveEventDetail";
+import CalendarDnD from "./components/CalendarDnD";
 
 class App extends Component {
     render() {
@@ -19,6 +20,7 @@ class App extends Component {
                     <Route path="/main/events/live" component={LiveEventDetail}/>
                     <Route path="/main/events/recorded" component={RecordedEventDetail}/>
                     <Route path="/myevents" component={MyEvents}/>
+                    <Route path="/calendar" component={CalendarDnD}/>
                 </div>
             </Router>
         );

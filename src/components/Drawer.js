@@ -96,7 +96,7 @@ class ResponsiveDrawer extends React.Component {
                     </IconButton>
                 </ListItem>
                 <Divider />
-                <ListItem button key="Events" component={Link} to="/events">
+                <ListItem button key="Events" component={Link} to="/npm">
                     <ListItemIcon>
                         <ViewQuiltIcon />
                     </ListItemIcon>
