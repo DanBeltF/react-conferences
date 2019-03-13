@@ -1,0 +1,10 @@
+git language: node_js
+node_js:
+  - 10.15.3
+warnings_are_errors: false
+script: :
+  - echo "DEPLOYING!"
+install:
+  - npm install -g firebase-tools
+after_success:
+  - firebase deploy --token $FIREBASE_TOKEN
