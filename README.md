@@ -1,7 +1,7 @@
 # React Conferences
 [![Heroku](https://wmpics.pics/di-D9YP.png)](https://react-conferences.herokuapp.com/)
 [![Firebase](https://wmpics.pics/di-MURE.png)](https://react-conferences.firebaseapp.com)
-
+[![Build Status](https://travis-ci.org/DanBeltF/react-conferences.svg?branch=master)](https://travis-ci.org/DanBeltF/react-conferences)
 An application that displays two lists of conferences as a lists of cards. Each card provides the conference detail such as name, location, date, tags, and author.
 
 The application is composed of the following components:
