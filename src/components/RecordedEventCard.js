@@ -13,6 +13,8 @@ import Typography from '@material-ui/core/Typography';
 import green from '@material-ui/core/colors/green';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
+import {Link, Route} from 'react-router-dom'
+import RecordedEventDetail from "./RecordedEventDetail";
 
 const styles = theme => ({
     card: {
@@ -40,7 +42,7 @@ const styles = theme => ({
     },
 });
 
-class RecipeReviewCard extends React.Component {
+class RecordedEventCard extends React.Component {
     state = { expanded: false };
 
     handleExpandClick = () => {
@@ -54,7 +56,7 @@ class RecipeReviewCard extends React.Component {
 
         return (
             <Card className={classes.card}>
-                <CardActionArea>
+                <CardActionArea component={Link} to="/main/events/recorded">
                     <CardHeader
                         avatar={
                             <Avatar aria-label="Recipe" className={classes.avatar}>
@@ -90,8 +92,5 @@ class RecipeReviewCard extends React.Component {
     }
 }
 
-RecipeReviewCard.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
 
-export default withStyles(styles)(RecipeReviewCard);
+export default withStyles(styles)(RecordedEventCard);

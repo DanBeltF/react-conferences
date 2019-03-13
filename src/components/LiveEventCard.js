@@ -40,7 +40,7 @@ const styles = theme => ({
     },
 });
 
-class RecipeReviewCard extends React.Component {
+class LiveEventCard extends React.Component {
     state = { expanded: false };
 
     handleExpandClick = () => {
@@ -90,8 +90,4 @@ class RecipeReviewCard extends React.Component {
     }
 }
 
-RecipeReviewCard.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(RecipeReviewCard);
+export default withStyles(styles)(LiveEventCard);

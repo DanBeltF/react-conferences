@@ -24,6 +24,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 import {Link} from 'react-router-dom';
 import EventTabs from "./EventTabs";
+import RecordedEventDetail from "./RecordedEventDetail";
 
 const drawerWidth = 240;
 
@@ -101,7 +102,7 @@ class ResponsiveDrawer extends React.Component {
                     </ListItemIcon>
                     <ListItemText primary="Events" />
                 </ListItem>
-                <ListItem button key="MyEvents" component={Link} to="">
+                <ListItem button key="MyEvents" component={Link} to="/myevents">
                     <ListItemIcon>
                         <StarIcon />
                     </ListItemIcon>
