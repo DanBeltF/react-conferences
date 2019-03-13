@@ -13,8 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import green from '@material-ui/core/colors/green';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
-import {Link, Route} from 'react-router-dom'
-import RecordedEventDetail from "./RecordedEventDetail";
+import {Link} from 'react-router-dom'
 
 const styles = theme => ({
     card: {
@@ -59,7 +58,7 @@ class RecordedEventCard extends React.Component {
                 <CardActionArea component={Link} to="/main/events/recorded">
                     <CardHeader
                         avatar={
-                            <Avatar aria-label="Recipe" className={classes.avatar}>
+                            <Avatar aria-label="avatar" className={classes.avatar}>
                                 {letterAut}
                             </Avatar>
                         }

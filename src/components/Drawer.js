@@ -108,14 +108,14 @@ class ResponsiveDrawer extends React.Component {
                     </ListItemIcon>
                     <ListItemText primary="My Events" />
                 </ListItem>
-                <ListItem button key="Calendar" component={Link} to="">
+                <ListItem button key="Calendar" component={Link} to="/calendar">
                     <ListItemIcon>
                         <EventIcon />
                     </ListItemIcon>
                     <ListItemText primary="Calendar" />
                 </ListItem>
                 <Divider />
-                <ListItem button key="Logout" component={Link} to="">
+                <ListItem button key="Logout" component={Link} to="/">
                     <ListItemIcon>
                         <MeetingRoomIcon />
                     </ListItemIcon>

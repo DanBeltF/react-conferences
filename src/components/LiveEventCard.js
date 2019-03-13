@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -13,6 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import yellow from '@material-ui/core/colors/yellow';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
+import {Link} from "react-router-dom";
 
 const styles = theme => ({
     card: {
@@ -54,10 +54,10 @@ class LiveEventCard extends React.Component {
 
         return (
             <Card className={classes.card}>
-                <CardActionArea>
+                <CardActionArea component={Link} to="/main/events/live">
                     <CardHeader
                         avatar={
-                            <Avatar aria-label="Recipe" className={classes.avatar}>
+                            <Avatar aria-label="avatar" className={classes.avatar}>
                                 {letterAut}
                             </Avatar>
                         }

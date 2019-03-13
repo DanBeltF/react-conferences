@@ -6,6 +6,7 @@ import EventTabs from "./components/EventTabs";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import RecordedEventDetail from "./components/RecordedEventDetail";
 import MyEvents from "./components/MyEvents";
+import LiveEventDetail from "./components/LiveEventDetail";
 
 class App extends Component {
     render() {
@@ -15,6 +16,7 @@ class App extends Component {
                     <Route exact path="/" component={Login}/>
                     <Route path="/main" component={ResponsiveDrawer}/>
                     <Route path="/events" component={EventTabs}/>
+                    <Route path="/main/events/live" component={LiveEventDetail}/>
                     <Route path="/main/events/recorded" component={RecordedEventDetail}/>
                     <Route path="/myevents" component={MyEvents}/>
                 </div>
