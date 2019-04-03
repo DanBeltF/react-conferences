@@ -111,7 +111,7 @@ class ResponsiveDrawer extends React.Component {
             <div>
                 <div className={classes.toolbar} />
                 <ListItem>
-                    <Avatar className={classes.orangeAvatar}>A</Avatar>
+                    <Avatar className={classes.orangeAvatar}>{localStorage.getItem('username').charAt(0)}</Avatar>
                     <ListItemText primary={ localStorage.getItem('username')} secondary={ localStorage.getItem('password') } />
                     <IconButton aria-label="Delete" className={classes.icon}>
                         <EditIcon fontSize="small"/>
