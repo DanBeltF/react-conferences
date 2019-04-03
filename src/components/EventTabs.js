@@ -9,6 +9,7 @@ import {RecordedEventList} from "./RecordedEventList";
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 import {Link} from "react-router-dom";
+import Tooltip from '@material-ui/core/Tooltip';
 
 function TabContainer(props) {
     return (
@@ -40,7 +41,7 @@ class EventTabs extends React.Component {
     handleChange = (event, value) => {
         this.setState({ value });
     };
-
+    //todo add react horizontal scrolling
     render() {
         const { classes } = this.props;
         const { value } = this.state;
@@ -58,9 +59,11 @@ class EventTabs extends React.Component {
                 {value === 0 && <TabContainer><LiveEventList/></TabContainer>}
                 {value === 1 && <TabContainer><RecordedEventList/></TabContainer>}
 
-                <Fab color="primary" aria-label="Add" className={classes.fab} component={Link} to="/main/newconference">
-                     <AddIcon />
-                </Fab>
+                <Tooltip title="Add New Conference" placement="left">
+                    <Fab color="primary" aria-label="Add" className={classes.fab} component={Link} to="/main/newconference">
+                         <AddIcon />
+                    </Fab>
+                </Tooltip>
             </div>
         );
     }

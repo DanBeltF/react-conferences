@@ -135,7 +135,7 @@ export class Login extends React.Component{
                                 className="submit"
                                 disabled={!this.validateForm()}
                                 component={Link}
-                                to={"/main"}
+                                to={"/main/events"}
                                 onClick={this.handleAuthentication}
                             >
                                 LOGIN

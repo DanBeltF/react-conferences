@@ -55,7 +55,7 @@ class RecordedEventCard extends React.Component {
 
         return (
             <Card className={classes.card}>
-                <CardActionArea component={Link} to="/main/events/recorded">
+                <CardActionArea component={Link} to="/main/recorded">
                     <CardHeader
                         avatar={
                             <Avatar aria-label="avatar" className={classes.avatar}>

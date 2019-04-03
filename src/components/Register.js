@@ -9,18 +9,23 @@ import InputLabel from '@material-ui/core/InputLabel';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import axios from 'axios';
-import DonutSmallIcon from "./Login";
 import {Link} from "react-router-dom";
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormLabel from '@material-ui/core/FormLabel';
 
 class Register extends Component {
     constructor(props){
         super(props);
-        this.state={
+        this.state = {
             first_name:'',
             last_name:'',
             email:'',
-            password:''
+            password:'',
+            role: ''
         }
+        this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange(e) {
@@ -29,13 +34,14 @@ class Register extends Component {
 
     handleClick(event){
         var apiBaseUrl = "http://localhost:3000/api/";
-        console.log("values",this.state.first_name,this.state.last_name,this.state.email,this.state.password);
+        console.log("values",this.state.first_name,this.state.last_name,this.state.email,this.state.password, this.state.role);
         var self = this;
         var payload={
             "first_name": this.state.first_name,
             "last_name":this.state.last_name,
             "email":this.state.email,
-            "password":this.state.password
+            "password":this.state.password,
+            "role": this.state.role
         }
         axios.post(apiBaseUrl+'/register', payload)
             .then(function (response) {
@@ -111,7 +117,20 @@ class Register extends Component {
                                     onChange={this.handleChange}
                                 />
                             </FormControl>
-                            <br />
+                            <FormControl margin="normal" component="fieldset" >
+                                <FormLabel component="legend">Role</FormLabel>
+                                <RadioGroup
+                                    aria-label="Role"
+                                    name="role"
+                                    value={this.state.role}
+                                    onChange={this.handleChange}
+                                >
+                                    <FormControlLabel value="viewer" name="viewer" control={<Radio />} label="Viewer" />
+                                    <FormControlLabel value="speaker" name="speaker" control={<Radio />} label="Speaker" />
+                                </RadioGroup>
+                            </FormControl>
+
+
                             <br />
 
                             <Button

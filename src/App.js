@@ -21,8 +21,8 @@ class App extends Component {
                     <Route path="/main" component={ResponsiveDrawer}/>
                     <Route path="/main/events" component={EventTabs}/>
                     <Route path="/main/newconference" component={NewConference}/>
-                    <Route path="/main/events/live" component={LiveEventDetail}/>
-                    <Route path="/main/events/recorded" component={RecordedEventDetail}/>
+                    <Route path="/main/live" component={LiveEventDetail}/>
+                    <Route path="/main/recorded" component={RecordedEventDetail}/>
                     <Route path="/main/myevents" component={MyEvents}/>
                     <Route path="/main/calendar" component={CalendarDnD}/>
                 </div>

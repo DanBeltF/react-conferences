@@ -10,7 +10,6 @@ import { MuiPickersUtilsProvider, DateTimePicker } from 'material-ui-pickers';
 import DoneIcon from '@material-ui/icons/Done';
 import {Link} from "react-router-dom";
 
-
 export class NewConference extends React.Component {
 
     constructor(props) {
@@ -102,9 +101,11 @@ export class NewConference extends React.Component {
                         />
 
                     </MuiPickersUtilsProvider>
+
                     <Fab className="fab" color="secondary" aria-label="Done" component={Link} to="/main/events/">
                         <DoneIcon />
                     </Fab>
+
                 </Paper>
             </>
         );

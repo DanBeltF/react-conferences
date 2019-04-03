@@ -54,7 +54,7 @@ class LiveEventCard extends React.Component {
 
         return (
             <Card className={classes.card}>
-                <CardActionArea component={Link} to="/main/events/live">
+                <CardActionArea component={Link} to="/main/live">
                     <CardHeader
                         avatar={
                             <Avatar aria-label="avatar" className={classes.avatar}>
