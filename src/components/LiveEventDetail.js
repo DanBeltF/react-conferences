@@ -16,6 +16,7 @@ const styles = theme => ({
         padding: theme.spacing.unit * 2,
         textAlign: 'center',
         color: theme.palette.text.secondary,
+        marginLeft: 240
     },
 });
 

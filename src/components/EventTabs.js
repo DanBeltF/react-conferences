@@ -8,6 +8,7 @@ import {LiveEventList} from "./LiveEventList";
 import {RecordedEventList} from "./RecordedEventList";
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
+import {Link} from "react-router-dom";
 
 function TabContainer(props) {
     return (
@@ -21,7 +22,7 @@ const styles = theme => ({
     root: {
         flexGrow: 1,
         backgroundColor: theme.palette.background.paper,
-        marginLeft: 240,  //todo change this value to make it work on mobile
+        marginLeft: 240
     },
     fab: {
         margin: theme.spacing.unit,
@@ -51,13 +52,13 @@ class EventTabs extends React.Component {
                 <AppBar position="static">
                     <Tabs value={value} onChange={this.handleChange} centered variant="fullWidth">
                         <Tab label="Live Events" />
-                        <Tab label="Recorded Events" />
+                        <Tab label="Past Events" />
                     </Tabs>
                 </AppBar>
                 {value === 0 && <TabContainer><LiveEventList/></TabContainer>}
                 {value === 1 && <TabContainer><RecordedEventList/></TabContainer>}
 
-                <Fab color="primary" aria-label="Add" className={classes.fab}>
+                <Fab color="primary" aria-label="Add" className={classes.fab} component={Link} to="/main/newconference">
                      <AddIcon />
                 </Fab>
             </div>
