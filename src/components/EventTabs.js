@@ -21,7 +21,7 @@ const styles = theme => ({
     root: {
         flexGrow: 1,
         backgroundColor: theme.palette.background.paper,
-        marginLeft: 240, //todo change this value to make it work on mobile
+        marginLeft: 240,  //todo change this value to make it work on mobile
     },
     fab: {
         margin: theme.spacing.unit,
