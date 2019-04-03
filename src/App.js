@@ -8,6 +8,7 @@ import RecordedEventDetail from "./components/RecordedEventDetail";
 import MyEvents from "./components/MyEvents";
 import LiveEventDetail from "./components/LiveEventDetail";
 import CalendarDnD from "./components/CalendarDnD";
+import Register from "./components/Register";
 
 class App extends Component {
     render() {
@@ -15,6 +16,7 @@ class App extends Component {
             <Router>
                 <div className="App">
                     <Route exact path="/" component={Login}/>
+                    <Route path="/register" component={Register}/>
                     <Route path="/main" component={ResponsiveDrawer}/>
                     <Route path="/events" component={EventTabs}/>
                     <Route path="/main/events/live" component={LiveEventDetail}/>
