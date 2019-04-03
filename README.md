@@ -20,7 +20,7 @@ The application is composed of the following components:
 
 * [Node.js](https://nodejs.org/en/) - Javascript runtime
 * [React](https://reactjs.org/) - A javascript library for building user interfaces
-* [Material-UI] (https://material-ui.com/) - React components that implement Google's Material Design.
+* [Material-UI](https://material-ui.com/) - React components that implement Google's Material Design.
 ---
 
 ## Getting Started
@@ -73,6 +73,22 @@ npm -v
 * Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
   The page will reload if you make edits.
+
+* Production mode
+
+  This will run locally the project npm task
+
+  ```bash
+  npm run build
+  ```
+  Serve it with a static server
+
+  ```bash
+  npm install -g serve
+  serve -s build
+  ```
+
+* Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
 ---
 
