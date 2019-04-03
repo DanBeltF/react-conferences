@@ -9,6 +9,7 @@ import MomentUtils from '@date-io/moment';
 import { MuiPickersUtilsProvider, DateTimePicker } from 'material-ui-pickers';
 import DoneIcon from '@material-ui/icons/Done';
 import {Link} from "react-router-dom";
+import axios from 'axios';
 
 export class NewConference extends React.Component {
 
@@ -18,7 +19,11 @@ export class NewConference extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleDateChange = this.handleDateChange.bind(this);
         this.handleAddNewConference = this.handleAddNewConference.bind(this);
-
+        this.axios = axios.create({
+            baseURL: 'http://localhost:8080/api',
+            timeout: 1000,
+            headers: {'Authorization': 'Bearer ' + localStorage.getItem("accessToken")}
+        });
 
     }
 
@@ -41,6 +46,8 @@ export class NewConference extends React.Component {
         };
 
         localStorage.setItem('data', JSON.stringify(newItem));
+        this.axios.post("http://localhost:8080/register/Event/create",newItem);
+
         console.log(localStorage.getItem('data'));
         this.setState({
             //items: prevState.items.concat(newItem),

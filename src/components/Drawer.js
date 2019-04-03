@@ -84,6 +84,25 @@ class ResponsiveDrawer extends React.Component {
     handleDrawerToggle = () => {
         this.setState(state => ({ mobileOpen: !state.mobileOpen }));
     };
+    /*
+    componentDidMount() {
+        const username = localStorage.getItem('username');
+        this.tokenAxios.get('/user/' + username)
+            .then(response => {
+                localStorage.setItem(username, JSON.stringify(response.data));
+                this.setState({userInfo: response.data});
+            });
+        this.tokenAxios.get('/tasks/byUser/'+username)
+            .then(response => {
+                let tasks = [];
+                response.data.forEach(function (task) {
+                    tasks.push(task)
+                });
+                localStorage.setItem('tasks', JSON.stringify(tasks));
+                this.setState({tasks: tasks});
+            });
+
+    }*/
 
     render() {
         const { classes, theme } = this.props;
@@ -93,7 +112,7 @@ class ResponsiveDrawer extends React.Component {
                 <div className={classes.toolbar} />
                 <ListItem>
                     <Avatar className={classes.orangeAvatar}>A</Avatar>
-                    <ListItemText primary="admin" secondary="admin@gmail.com" />
+                    <ListItemText primary={ localStorage.getItem('username')} secondary={ localStorage.getItem('password') } />
                     <IconButton aria-label="Delete" className={classes.icon}>
                         <EditIcon fontSize="small"/>
                     </IconButton>

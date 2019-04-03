@@ -21,10 +21,26 @@ export class Login extends React.Component{
         super(props);
         this.state = { username: '', password: '', showPassword: false };
         localStorage.setItem('isLoggedIn', 'false');
+        localStorage.setItem('username', this.state.username);
+        localStorage.setItem('password', this.state.password);
         this.handleUsernameChange = this.handleUsernameChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
         this.handleAuthentication = this.handleAuthentication.bind(this);
         this.handleClickShowPassword = this.handleClickShowPassword.bind(this);
+        /*axios.post('http://localhost:8080/api/user/login', {
+             username: this.state.username,
+             password: this.state.password
+         })
+             .then(function (response) {
+                 console.log(response.data);
+                 localStorage.setItem("accessToken", response.data.accessToken);
+                 localStorage.setItem('username', this.state.username);
+             })
+             .catch(function (error) {
+                 console.log(error);
+                 alert("Something went wrong");
+                 this.setState({ username: '', password: '' });
+        });*/
     }
 
     validateForm() {
@@ -47,6 +63,8 @@ export class Login extends React.Component{
         if (this.state.username === localStorage.getItem('username') && this.state.password === localStorage.getItem('password')) {
             localStorage.setItem('isLoggedIn', 'true');
         }
+        localStorage.setItem('username', this.state.username);
+        localStorage.setItem('password', this.state.password);
 
         var apiBaseUrl = "http://localhost:3000/api/";
         var self = this;
