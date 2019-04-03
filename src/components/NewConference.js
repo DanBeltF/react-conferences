@@ -18,6 +18,8 @@ export class NewConference extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleDateChange = this.handleDateChange.bind(this);
         this.handleAddNewConference = this.handleAddNewConference.bind(this);
+
+
     }
 
     handleChange(e) {
