@@ -22,9 +22,12 @@ import Typography from '@material-ui/core/Typography';
 import ViewQuiltIcon from '@material-ui/icons/ViewQuilt';
 import { withStyles } from '@material-ui/core/styles';
 
-import {Link} from 'react-router-dom';
+import {Link, Route} from 'react-router-dom';
 import EventTabs from "./EventTabs";
 import RecordedEventDetail from "./RecordedEventDetail";
+import LiveEventDetail from "./LiveEventDetail";
+import MyEvents from "./MyEvents";
+import CalendarDnD from "./CalendarDnD";
 
 const drawerWidth = 240;
 
@@ -58,7 +61,7 @@ const styles = theme => ({
     },
     content: {
         flexGrow: 1,
-        padding: theme.spacing.unit * 3,
+        padding: theme.spacing.unit * 1.2,
     },
     orangeAvatar: {
         margin: 1,
@@ -96,19 +99,19 @@ class ResponsiveDrawer extends React.Component {
                     </IconButton>
                 </ListItem>
                 <Divider />
-                <ListItem button key="Events" component={Link} to="/events">
+                <ListItem button key="Events" component={Link} to="/main/events">
                     <ListItemIcon>
                         <ViewQuiltIcon />
                     </ListItemIcon>
                     <ListItemText primary="Events" />
                 </ListItem>
-                <ListItem button key="MyEvents" component={Link} to="/myevents">
+                <ListItem button key="MyEvents" component={Link} to="/main/myevents">
                     <ListItemIcon>
                         <StarIcon />
                     </ListItemIcon>
                     <ListItemText primary="My Events" />
                 </ListItem>
-                <ListItem button key="Calendar" component={Link} to="/calendar">
+                <ListItem button key="Calendar" component={Link} to="/main/calendar">
                     <ListItemIcon>
                         <EventIcon />
                     </ListItemIcon>
@@ -125,7 +128,7 @@ class ResponsiveDrawer extends React.Component {
         );
 
         return (
-            <div className={classes.root}>
+            <React.Fragment className={classes.root}>
                 <CssBaseline />
                 <AppBar position="fixed" className={classes.appBar}>
                     <Toolbar>
@@ -174,9 +177,8 @@ class ResponsiveDrawer extends React.Component {
                 <main className={classes.content}>
                     <div className={classes.toolbar} />
 
-
                 </main>
-            </div>
+            </React.Fragment>
         );
     }
 }

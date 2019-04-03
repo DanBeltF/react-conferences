@@ -21,11 +21,14 @@ const styles = theme => ({
     root: {
         flexGrow: 1,
         backgroundColor: theme.palette.background.paper,
+        marginLeft: 240, //todo change this value to make it work on mobile
     },
     fab: {
-        marginLeft: "150vh"
-
-    }
+        margin: theme.spacing.unit,
+        position: 'fixed',
+        bottom: theme.spacing.unit * 2,
+        right: theme.spacing.unit * 2,
+    },
 });
 
 class EventTabs extends React.Component {
@@ -53,6 +56,7 @@ class EventTabs extends React.Component {
                 </AppBar>
                 {value === 0 && <TabContainer><LiveEventList/></TabContainer>}
                 {value === 1 && <TabContainer><RecordedEventList/></TabContainer>}
+
                 <Fab color="primary" aria-label="Add" className={classes.fab}>
                      <AddIcon />
                 </Fab>

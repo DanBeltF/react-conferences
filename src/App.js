@@ -4,8 +4,8 @@ import {Login} from "./components/Login";
 import ResponsiveDrawer from "./components/Drawer";
 import EventTabs from "./components/EventTabs";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import RecordedEventDetail from "./components/RecordedEventDetail";
 import MyEvents from "./components/MyEvents";
+import RecordedEventDetail from "./components/RecordedEventDetail";
 import LiveEventDetail from "./components/LiveEventDetail";
 import CalendarDnD from "./components/CalendarDnD";
 import Register from "./components/Register";
@@ -18,11 +18,11 @@ class App extends Component {
                     <Route exact path="/" component={Login}/>
                     <Route path="/register" component={Register}/>
                     <Route path="/main" component={ResponsiveDrawer}/>
-                    <Route path="/events" component={EventTabs}/>
+                    <Route path="/main/events" component={EventTabs}/>
                     <Route path="/main/events/live" component={LiveEventDetail}/>
                     <Route path="/main/events/recorded" component={RecordedEventDetail}/>
-                    <Route path="/myevents" component={MyEvents}/>
-                    <Route path="/calendar" component={CalendarDnD}/>
+                    <Route path="/main/myevents" component={MyEvents}/>
+                    <Route path="/main/calendar" component={CalendarDnD}/>
                 </div>
             </Router>
         );

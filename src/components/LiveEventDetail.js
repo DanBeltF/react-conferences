@@ -21,7 +21,7 @@ const styles = theme => ({
 
 function LiveEventDetail(props) {
     const { classes } = props;
-
+//todo include embeded presentation
     return (
         <div>
             <br />
@@ -30,17 +30,7 @@ function LiveEventDetail(props) {
             <Paper className={classes.root} elevation={1}>
                 <Grid container spacing={24}>
                     <Grid item xs={12}>
-                        <Paper className={classes.paper}>
-                            <iframe src="//www.slideshare.net/slideshow/embed_code/key/Ik7sePMpaHdIr4" width="595"
-                                height="485" frameBorder="0" marginWidth="0" marginHeight="0" scrolling="no"
-                                style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;"
-                                allowFullScreen/>
-                            <div style="margin-bottom:5px"><strong> <a
-                                href="//www.slideshare.net/amine789/learn-reactjs" title="Learn react-js"
-                                target="_blank">Learn react-js</a> </strong> de <strong><a
-                                href="//www.slideshare.net/amine789" target="_blank">C...L, NESPRESSO, WAFAASSURANCE,
-                                SOFRECOM ORANGE</a></strong></div>
-                        </Paper>
+
                     </Grid>
                     <Grid item xs={12} sm={6}>
                         <Paper className={classes.paper}>

@@ -50,7 +50,7 @@ class LiveEventCard extends React.Component {
     render() {
         const { classes } = this.props;
         var aut = this.props.author,
-            letterAut = aut.charAt(0);
+            letterAuthor = aut.charAt(0);
 
         return (
             <Card className={classes.card}>
@@ -58,7 +58,7 @@ class LiveEventCard extends React.Component {
                     <CardHeader
                         avatar={
                             <Avatar aria-label="avatar" className={classes.avatar}>
-                                {letterAut}
+                                {letterAuthor}
                             </Avatar>
                         }
 
